@@ -18,4 +18,5 @@
 - Boostrap -> formatting
 
 ## Refactor TODOS:
+- Add full_name method for users
 - Refactor user association intégration test in post_spec
