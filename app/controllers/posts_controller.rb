@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
-      redirect_to @post, notice: 'Your post was created successfully'
+      redirect_to @post, notice: 'Document Created Successfully.'
     else
       render :new
     end
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.delete
-    redirect_to posts_path, notice: 'Your post was deleted successfully'
+    redirect_to posts_path, notice: 'Document deleted Successfully.'
   end
 
   private

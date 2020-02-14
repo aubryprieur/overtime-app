@@ -9,8 +9,16 @@
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <% if notice %>
+     <div id="notice_wrapper">
+        <p class= "notice"><%= notice %>
+      </div>
+    <% elsif alert %>
+      <div id="alert_wrapper">
+        <p class= "alert"><%= alert %>
+      </div>
+    <% end %>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -19,5 +27,11 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+      setTimeout(function(){ document.getElementById("notice_wrapper").style.display = "none"; }, 4000);
+      //var s = document.getElementById('notice_wrapper').style;
+      //s.opacity = 1;
+      //(function fade(){(s.opacity-=.1)<0?s.display="none":setTimeout(fade,500)})();
+    </script>
   </body>
 </html>
