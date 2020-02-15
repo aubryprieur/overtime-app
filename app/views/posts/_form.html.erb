@@ -1,4 +1,14 @@
-<%= form_for @post, class: "form-horizontal" do |f| %>
+<%= form_for @post, class: "form-horizontal" do |f| %>`
+  <% if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |msg| %>
+      <div class="flash flash-danger alert alert-dismissible fade show" role="alert">
+        <span>😱 <%= msg %></span>
+        <a data-dismiss="alert" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+    <% end %>
+  <% end %>
   <div class="form-group">
     <%= f.label :date, class: "col-sm-2 control-label" %>
     <%= f.date_field :date, class: "form-control" %>
