@@ -19,6 +19,7 @@ require('jquery')
 
 import 'bootstrap'
 import './src/application.scss'
+import "bourbon"
 
 document.addEventListener("turbolinks:load", () => {
   $('[data-toggle= "tooltip"]').tooltip()

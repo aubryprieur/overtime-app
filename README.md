@@ -11,11 +11,14 @@
 - Approval Workflow
 - SMS Sending -> link toapproval or overtime input
 - Administrate admin dashboard
+- Block non admin and guest users
 - Email summary tomanagers for approval
 - Needs to be documented if employee did or not log overtime
 
 ## UI:
 - Boostrap -> formatting (X)
+- Icons from Font Awesome
+- Update style for form (X)
 
 ## Refactor TODOS:
 - Add full_name method for users (X)
