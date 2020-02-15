@@ -8,15 +8,22 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/6ff4afb2b5.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <% if notice %>
-     <div id="notice_wrapper">
-        <p class= "notice"><%= notice %>
+     <div id="notice_wrapper" class="flash flash-success alert alert-dismissible fade show" role="alert">
+        <span> 🎉 <%= notice %></span>
+        <a data-dismiss="alert" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </a>
       </div>
     <% elsif alert %>
-      <div id="alert_wrapper">
-        <p class= "alert"><%= alert %>
+      <div id="notice_wrapper" class="flash flash-danger alert alert-dismissible fade show" role="alert">
+        <span>😱 <%= alert %></span>
+        <a data-dismiss="alert" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </a>
       </div>
     <% end %>
     <div class="container">
@@ -35,3 +42,4 @@
     </script>
   </body>
 </html>
+
