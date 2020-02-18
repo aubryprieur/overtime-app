@@ -1,4 +1,4 @@
-<%= form_for @post, class: "form-horizontal" do |f| %>`
+<%= form_for @post, class: "form-horizontal" do |f| %>
   <% if @post.errors.any? %>
     <% @post.errors.full_messages.each do |msg| %>
       <div class="flash flash-danger alert alert-dismissible fade show" role="alert">
@@ -16,17 +16,8 @@
   <div class="form-group">
     <%= f.label :rationale, class: "col-sm-2 control-label" %>
     <%= f.text_area :rationale, class: "form-control" %>
-  <div class="form-group">
-  <%= f.radio_button :status, 'submitted' %>
-  <%= f.label :status, 'Submitted' %>
-
-  <%= f.radio_button :status, 'approved' %>
-  <%= f.label :status, 'Approved' %>
-
-  <%= f.radio_button :status, 'rejected' %>
-  <%= f.label :status, 'Rejected' %>
-  <div>
   </div>
+  <%= render partial: 'status', locals: { f: f} if current_user.type == 'AdminUser' %>
   <%= f.submit 'Save', class: "btn btn-primary btn-block" %>
 <% end %>
 
