@@ -5,7 +5,7 @@ FactoryBot.define do
     user
   end
 
-    factory :second_post, class: "Post" do
+  factory :second_post, class: "Post" do
     date {Date.yesterday}
     rationale {"Some more content"}
     user
