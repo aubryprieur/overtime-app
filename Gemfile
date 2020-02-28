@@ -31,6 +31,7 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 gem "administrate"
 gem 'bourbon'
 gem 'pundit', '~> 2.1'
+gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -41,6 +42,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'rubocop-rspec', require: false
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
 end
 
 group :development do
