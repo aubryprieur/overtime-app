@@ -1,4 +1,5 @@
 puts 'Cleaning database...'
+AuditLog.destroy_all
 Post.destroy_all
 User.destroy_all
 AdminUser.destroy_all
@@ -26,3 +27,9 @@ puts 'Creating posts...'
   Post.create!(date: Date.today, rationale: "#{post} rationale content", user: user1, overtime_request: 2.5)
 end
 puts "100 Posts have been created"
+
+puts 'Creating audit logs...'
+100.times do |audit_log|
+  AuditLog.create!(user_id: User.last.id, status: 0, start_date: (Date.today - 6.days))
+end
+puts "100 audit logs have been created"
