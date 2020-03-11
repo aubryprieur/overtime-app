@@ -1,7 +1,7 @@
 .pending-homepage {
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #E3E3E3;
+  background-color: #DDDDDD;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -9,11 +9,15 @@
 }
 
 .homepage-block {
-  background-color: #1D3C91;
+  background-color: #0074D9;
   color: white;
-  margin: 15px;
+  margin: 20px 42px 12px 42px ;
   padding: 15px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+}
+
+.pending-details {
+  font-weight: 900;
 }
