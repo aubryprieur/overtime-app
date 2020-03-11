@@ -9,15 +9,28 @@
 }
 
 .homepage-block {
-  background-color: #0074D9;
+  background-color: #0984e3;
   color: white;
   margin: 20px 42px 12px 42px ;
   padding: 15px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .pending-details {
   font-weight: 900;
 }
+
+.btn-success.approve-btn {
+  background-color: #55efc4;
+  border-color: #55efc4;
+}
+
+.btn-warning.review-btn {
+  background-color: #ffeaa7;
+  border-color: #ffeaa7;
+}
+
+
+
