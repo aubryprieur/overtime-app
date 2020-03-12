@@ -8,8 +8,10 @@
   </div>
 
   <div class="pending-homepage">
-    <div>
-      <p>Hello</p>
+    <div class="col-md-12">
+      <h2>Confirmation log</h2>
     </div>
+    <hr>
+    <%= render partial: "confirmation_log", locals: { recent_audit_items: @recent_audit_items } %>
   </div>
 </div>
