@@ -13,5 +13,9 @@
     </div>
     <hr>
     <%= render partial: "confirmation_log", locals: { recent_audit_items: @recent_audit_items } %>
+
+    <hr>
+
+    <%= link_to 'View All Items', audit_logs_path, class: 'btn btn-primary' %>
   </div>
 </div>

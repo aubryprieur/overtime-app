@@ -7,7 +7,7 @@
       <span class="pending-details">Week Starting : </span><%= recent_audit_item.start_date %>
     </p>
     <p>
-      <span class="pending-details">Confirmed at : </span><%= recent_audit_item.end_date %>
+      <span class="pending-details">Confirmed at : </span><%= recent_audit_item.end_date || status_label('pending') %>
     </p>
       <p>
       <span class="pending-details">Status : </span><%= status_label recent_audit_item.status %>
