@@ -4,7 +4,9 @@
        asdf
     </div>
     <div class="col-md-5 offset-md-1 column jumbotron employee-blocks">
-      asdf
+      <h3>Pending Your Confirmation</h3>
+
+      <%= render partial: 'pending_audit_confirmations', locals: { pending_audit_confirmations: @pending_audit_confirmations} %>
     </div>
   </div>
 </div>
