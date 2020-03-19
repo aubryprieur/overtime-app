@@ -22,14 +22,15 @@ admin_user1 = AdminUser.create!(
   last_name: "User",
   phone: "2034576547")
 
+puts 'Creating audit logs...'
+  AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 6.days))
+  AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 13.days))
+  AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 20.days))
+puts "3 audit logs have been created"
+
 puts 'Creating posts...'
 100.times do |post|
   Post.create!(date: Date.today, rationale: "#{post} rationale content", user: @user, overtime_request: 2.5)
 end
 puts "100 Posts have been created"
 
-puts 'Creating audit logs...'
-  AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 6.days))
-  AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 13.days))
-  AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 20.days))
-puts "3 audit logs have been created"
