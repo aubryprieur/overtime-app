@@ -10,6 +10,7 @@ Rails.application.configure do
   config.log_tags = [ :request_id ]
   config.serve_static_assets = true
   config.assets.digest = true
+  config.action_mailer.default_url_options = { :host => 'rails-overtime.herokuapp.com' }
 
   #Sendgrid
   ActionMailer::Base.smtp_settings = {
