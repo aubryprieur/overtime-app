@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "mailer@devcamp.com"
+  default from: "contact@copas.coop"
   layout 'mailer'
 end
