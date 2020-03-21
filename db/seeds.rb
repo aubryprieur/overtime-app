@@ -2,6 +2,7 @@ puts 'Cleaning database...'
 AuditLog.destroy_all
 Post.destroy_all
 Employee.destroy_all
+User.destroy_all
 AdminUser.destroy_all
 
 puts 'Creating employees...'
