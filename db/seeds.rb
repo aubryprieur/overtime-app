@@ -12,7 +12,9 @@ puts 'Creating employees...'
   password_confirmation: "azerty",
   first_name: "Aubry",
   last_name: "Prieur",
-  phone: "3645711571")
+  phone: "3645711571",
+  ssn: 1234,
+  company: "ABC Company")
 
 puts 'Creating admin...'
 admin_user1 = AdminUser.create!(
@@ -21,7 +23,9 @@ admin_user1 = AdminUser.create!(
   password_confirmation: "azerty",
   first_name: "Admin",
   last_name: "User",
-  phone: "2034576547")
+  phone: "2034576547",
+  ssn: 1234,
+  company: "ABC Company")
 
 puts 'Creating audit logs...'
   AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 6.days))
