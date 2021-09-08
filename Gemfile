@@ -47,7 +47,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'rubocop-rspec', require: false
-  gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'better_errors', '~> 2.8'
   gem "binding_of_caller"
 end
 
